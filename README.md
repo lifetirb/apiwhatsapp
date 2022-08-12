@@ -1,4 +1,4 @@
-<h1 style="text-align: center"> whatsapp-api-nodejs Multi Device</h1>
+<h1 style="text-align: center"> Api Whatsapp Multi Usuário</h1>
 <p style="text-align: center">
 <a href="#"><img title="skynet" src="https://img.shields.io/badge/whatsapp api nodejs Multi Device-black?style=for-the-badge" alt=""></a>
 </p>
@@ -12,55 +12,55 @@
 
 ---
 
-An implementation of [Baileys](https://github.com/adiwajshing/Baileys/) as a simple RESTful API service with multi device support just `download`, `install`, and `start` using, `simple` as that.
+Uma implementação de [Baileys](https://github.com/adiwajshing/Baileys/) como um serviço de API RESTful simples com suporte a vários dispositivos apenas `download`, `install` e `start` usando, `simples` assim.
 
-# Libraries Used
+# Bibliotecas usadas
 
 -   [Baileys](https://github.com/adiwajshing/Baileys/)
 -   [Express](https://github.com/expressjs/express)
 
-# Installation
+# Instalação
 
-1. Download or clone this repo.
-2. Enter to the project directory.
-3. Execute `yarn install` to install the dependencies.
-4. Copy `.env.example` to `.env` and set the environment variables.
+1. Baixe ou clone este repositório.
+2. Entre no diretório do projeto.
+3. Execute `yarn install ou npm Install` para instalar as dependências.
+4. Copia `.env.example` para `.env` e defina as variáveis ​​de ambiente.
 
-# Docker Compose
+# Docker Composer
 
-1. Follow the [Installation](#installation) procedure
-2. Update `.env` and set 
+1. Siga o procedimento de [Instalação](#instalação)
+2. Atualizar `.env` e definir 
 ```
 MONGODB_ENABLED=true
 MONGODB_URL=mongodb://mongodb:27017/whatsapp_api
 ```
-3. Set your `TOKEN=` to a random string.
-4. Execute 
+3. Defina seu `TOKEN=` para uma string aleatória.
+4. Executar 
 ```
 docker-compose up -d
 ```
 
-# Configuration
+# Configuração
 
-Edit environment variables on `.env`
+Editar variáveis ​​de ambiente em `.env`
 
 ```a
-Important: You must set TOKEN= to a random string to protect the init route.
+Importante: Você deve definir TOKEN= como uma string aleatória para proteger a rota de inicialização.
 ```
 
 ```env
 # ==================================
-# SECURITY CONFIGURATION
+# CONFIGURAÇÃO DE SEGURANÇA
 # ==================================
 TOKEN=RANDOM_STRING_HERE
 ```
 
-# Usage
+# Usar
 
 1. `DEVELOPMENT:` Execute `yarn dev`
 2. `PRODUCTION:` Execute `yarn start`
 
-## Generate basic instance using random key
+## Gerar instância básica usando chave aleatória
 
 To generate an Instance Key  
 Using the route:
@@ -106,7 +106,7 @@ Save the value of the `key` from response. Then use this value to call all the r
 
 ## Postman Docs
 
-All routes are available as a postman collection.
+Todas as rotas estão disponíveis como uma coleção de Postman.
 
 -   https://documenter.getpostman.com/view/12514774/UVsPQkBq
 
@@ -114,7 +114,7 @@ All routes are available as a postman collection.
 
 Visit [http://localhost:3333/instance/qr?key=INSTANCE_KEY_HERE](http://localhost:3333/instance/qr?key=INSTANCE_KEY_HERE) to view the QR Code and scan with your device. If you take too long to scan the QR Code, you will have to refresh the page.
 
-## Send Message
+## Enviar Messagem
 
 ```sh
 # /message/text?key=INSTANCE_KEY_HERE&id=PHONE-NUMBER-WITH-COUNTRY-CODE&message=MESSAGE
@@ -125,14 +125,14 @@ curl --location --request POST 'localhost:3333/message/text?key=INSTANCE_KEY_HER
 --data-urlencode 'message=Hello World'
 ```
 
-See all routes here [src/api/routes](https://github.com/salman0ansari/whatsapp-api-nodejs/tree/main/src/api/routes)
+Veja todas as rotas aqui [src/api/routes](https://github.com/salman0ansari/whatsapp-api-nodejs/tree/main/src/api/routes)
 
-# Note
-I can't guarantee or can be held responsible if you get blocked or banned by using this software. WhatsApp does not allow bots using unofficial methods on their platform, so this shouldn't be considered totally safe.
+# Observação
+Não posso garantir ou ser responsabilizado se você for bloqueado ou banido ao usar este software. O WhatsApp não permite que bots usem métodos não oficiais em sua plataforma, portanto, isso não deve ser considerado totalmente seguro.
 
-# Legal
+# Jurídico
 
--   This code is in no way affiliated, authorized, maintained, sponsored or endorsed by WA (WhatsApp) or any of its affiliates or subsidiaries.
--   The official WhatsApp website can be found at https://whatsapp.com. "WhatsApp" as well as related names, marks, emblems and images are registered trademarks of their respective owners.
--   This is an independent and unofficial software Use at your own risk.
--   Do not spam people with this.
+- Este código não é de forma alguma afiliado, autorizado, mantido, patrocinado ou endossado pela WA (WhatsApp) ou por qualquer uma de suas afiliadas ou subsidiárias.
+- O site oficial do WhatsApp pode ser encontrado em https://whatsapp.com. "WhatsApp", bem como nomes, marcas, emblemas e imagens relacionados, são marcas registradas de seus respectivos proprietários.
+- Este é um software independente e não oficial Use por sua conta e risco.
+- Não faça spam com isso.
